@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Generated artifacts
+warehouse/
+parquet_cache/
+*.duckdb
+*.duckdb.wal
+
+# Virtual env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Claude / agent skill artifacts (planning, not delivery)
+.claude/
+AGENTS.md
+CONTEXT.md
+docs/agents/
+docs/adr/
+docs/superpowers/
