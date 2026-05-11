@@ -1,0 +1,36 @@
+[project]
+name = "kisabella"
+version = "0.1.0"
+description = "Kisabella's LLC liquor distribution analytics pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "polars==1.18.0",
+    "duckdb==1.1.3",
+    "streamlit==1.41.1",
+    "altair==5.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.4",
+    "ruff==0.8.4",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "N", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

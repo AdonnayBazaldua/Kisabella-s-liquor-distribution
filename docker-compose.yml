@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    image: kisabella-analytics:latest
+    container_name: kisabella-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./Data:/app/Data:ro
+      - parquet_cache:/app/parquet_cache
+      - warehouse:/app/warehouse
+    restart: "no"
+
+volumes:
+  parquet_cache:
+  warehouse:

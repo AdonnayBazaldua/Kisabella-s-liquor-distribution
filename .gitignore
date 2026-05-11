@@ -12,6 +12,9 @@ parquet_cache/
 *.duckdb
 *.duckdb.wal
 
+# Datos crudos (1.7 GB, distribuidos aparte; ver README seccion "Datos")
+Data/
+
 # Virtual env
 .venv/
 venv/
@@ -25,6 +28,7 @@ venv/
 .claude/
 AGENTS.md
 CONTEXT.md
+INTERNAL_DOCS.md
 docs/agents/
 docs/adr/
 docs/superpowers/
