@@ -70,7 +70,7 @@ Se propuso en un inciio el uso de Apache Spark + PostgreSQL pero tras una revist
 ## Términos clave
 
 - **Producto** ≡ `Brand` (entero que identifica el SKU; el dataset tiene 12,261 brands únicos, cada uno con `(Description, Size, Volume)` única)
-- **Marca** ≡ `VendorName` (proveedor/distribuidor; mapeo justificado en ADR 0003 porque `Brand` en este dataset es SKU, no marca comercial)
+- **Marca** ≡ `VendorName` (proveedor/distribuidor)
 - **Profit canónico** = `profit_net` = `(SalesDollars − ExciseTax) − cost_unit × SalesQuantity`
 - **Margin agregado** = `SUM(profit_net) / SUM(revenue_net) × 100` (ponderado por revenue, **no** AVG por fila)
 - **Devolución**: `SalesQuantity < 0` (incluida; el dataset 2016 entregado tiene 0 devoluciones empíricamente)
